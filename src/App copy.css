@@ -6,7 +6,7 @@
   --link-hover-color: #8c4c65;
   --profile-border-color: rgb(0, 0, 0);
   --header-button-bg-color: #8ba3b0;
-  --header-hover-bg-color: #f8acc9a3;
+  --header-hover-bg-color: #f8acc9;
   --button-bg-color: #8ba3b0;
   --button-hover-bg-color: #f8acc9;
   --button-font-color: black;
@@ -19,12 +19,12 @@
   --text-color: #ffffff;
   --sidebar-bg-color: #2d2d2d;
   --link-color: rgb(255, 255, 255);
-  --link-hover-color: #151514;
+  --link-hover-color: #c5d653;
   --profile-border-color: white;
   --header-button-bg-color: #6DB432;
-  --header-hover-bg-color:  #c9db54;
+  --header-hover-bg-color:  #c5d653;
   --button-bg-color: #6DB432;
-  --button-hover-bg-color: #c9db54;
+  --button-hover-bg-color: #c5d653;
   --button-font-color: white;
   --header-button-font-color: white;
 }
@@ -52,7 +52,6 @@ body {
   overflow-x: hidden;
   padding-top: 20px;
   background-color: var(--sidebar-bg-color);
-  transition: width 0.3s ease; /* */
 }
 
 .sidebar ul {
@@ -70,18 +69,6 @@ body {
   display: block;
   writing-mode: vertical-lr;
   text-orientation: mixed;
-  transition: transform 0.5s ease; /* */
-}
-
-.sidebar:hover {
-  width: 110px; /* */
-  background-color: var(--button-hover-bg-color);
-}
-
-.sidebar:hover ul li a {
-  margin-left: 10px;
-  transform: rotate(-90deg);/* edit */
-  transform-origin: center; /* edit */
 }
 
 .sidebar ul li a:hover {
@@ -101,13 +88,6 @@ body {
   height: 55px;
   object-fit: cover;
   border: 1.5px solid var(--profile-border-color);
-  transition: width 0.5s ease, height 0.3s ease; 
-}
-.profile-picture:hover {
-  width: 65px;
-  height: 65px;
-  transform: scale(1.2);
-  transform-origin: center;
 }
 
 .logout {
@@ -115,7 +95,6 @@ body {
   padding: 8px;
   margin-bottom: 0;
   list-style: none;
-  transition: transform 0.5s ease;
 }
 
 .logout a {
@@ -126,13 +105,7 @@ body {
   display: block;
   writing-mode: vertical-lr;
   text-orientation: mixed;
-  transition: transform 0.5s ease;
-}
-
-.sidebar:hover .logout a {
-  transform: rotate(-90deg);
-  transform-origin: center; 
-  margin-left: 10px; 
+  /* font-weight: 500; */
 }
 
 .logout a:hover {
@@ -140,6 +113,8 @@ body {
 }
 
 .EngToSpan-container {
+  /* position: fixed;
+  left: 30%; */
   display: flex;
   justify-content: center;
   align-items: center;
