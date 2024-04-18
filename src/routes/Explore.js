@@ -1,14 +1,10 @@
 import React from 'react';
-import SideBar from '../components/SideBar';
-import Header from '../components/Header';
 import HeartModel from '../components/HeartModel';
 import '../App.css'; 
 
 const Explore = () => {
   return (
     <div className="explore-container">
-        <Header />
-        <SideBar />
         <div className="main-content">
             <div className="class-container left-classes">
                 <img src="./class.jpg" alt="Class 1" className="class-preview"/>

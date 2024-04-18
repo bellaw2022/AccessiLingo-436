@@ -20,7 +20,7 @@ const SideBar = () => {
       </nav>
 
       <div className="logout">
-        <li><Link to="/login">LogOut</Link></li>
+        <li><Link to="/home">LogOut</Link></li>
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import SideBar from './SideBar';
 import '../App.css';
 
 const EngToSpan = () => {
@@ -36,7 +35,6 @@ const EngToSpan = () => {
 
     return (
         <div>
-            <SideBar />
             <div className="EngToSpan-container">
                 <div className="read-content">
                     <div className="story">

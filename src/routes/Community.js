@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import SideBar from '../components/SideBar';
-import Header from '../components/Header';
-import '../App.css'; 
 
 const Community = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -13,8 +10,6 @@ const Community = () => {
 
   return (
     <div className="community-container">
-        <Header />
-        <SideBar />
         <div className="community-content">
             <button onClick={toggleChat} className="ai-chat-button">Open AI Chat</button>
             {isChatOpen && (
