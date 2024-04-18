@@ -10,6 +10,10 @@
     background-size: cover;
 }
 
+[data-theme='dark'] .home-bg {
+    background-image: url("./../../public/Home-Dark.png");
+}
+
 .home-page {
     position: relative;
     z-index: 1;
@@ -35,8 +39,8 @@
     justify-content: space-evenly;
     padding: 0.5rem 0.75rem;
     border-radius: 1.5rem;
-    border: 1px solid var(--link-hover-color);
-    box-shadow: 1px 2px 0px 1px var(--link-hover-color);
+    border: 1px solid var(--button-shadow-color);
+    box-shadow: 1px 2px 0px 1px var(--button-shadow-color);
     cursor: pointer;
     transition: 0.125s box-shadow, 0.25s transform, 0.125s filter;
     will-change: contents;

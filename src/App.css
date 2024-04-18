@@ -11,7 +11,8 @@
   --button-hover-bg-color: #f8acc9;
   --button-font-color: black;
   --header-button-font-color: black;
-
+  --login-link-color: #860E44;
+  --button-shadow-color: #8c4c65;
 }
 
 [data-theme='dark'] {
@@ -22,11 +23,13 @@
   --link-hover-color: #151514;
   --profile-border-color: white;
   --header-button-bg-color: #6DB432;
-  --header-hover-bg-color:  #c9db54;
+  --header-hover-bg-color:  #6d9f46;
   --button-bg-color: #6DB432;
-  --button-hover-bg-color: #c9db54;
+  --button-hover-bg-color: #6d9f46;
   --button-font-color: white;
   --header-button-font-color: white;
+  --login-link-color: #6DB432;
+  --button-shadow-color: #406425;
 }
 
 body {

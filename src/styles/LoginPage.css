@@ -1,0 +1,119 @@
+.login-container {
+    display: flex;
+    flex-direction: row;
+    width: 67vw;
+    height: 88vh;
+    align-items: center;
+}
+
+.login__img {
+    background-image: url("./../../public/Login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 50vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+}
+
+[data-theme="dark"] .login__img {
+    background-image: url("./../../public/Login-Dark.png");
+}
+
+.login {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+}
+
+.login__header {
+    font-size: 4rem;
+}
+
+.login__form {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.login__form > div {
+    position: relative;
+}
+
+.login__form-label {
+    position: absolute;
+    left: -10000px;
+}
+
+.login__form-input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 1px solid var(--text-color);
+}
+
+.login__form > div i {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-100%, -50%);
+    color: #222;
+}
+
+.login__form-extras {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.login__form-extras a:any-link, .login__form-signup a:any-link {
+    color: var(--login-link-color);
+}
+
+.login__form-extras > div {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.login__form-extras > div label {
+    order: 1;
+}
+
+.login__form-extras > div input {
+    width: 1.125rem;
+    height: 1.125rem;
+    border: 1px solid var(--text-color);
+    accent-color: var(--login-link-color);
+    cursor: pointer;
+}
+
+.login__form-login {
+    background-color: var(--button-hover-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    border: 1px solid var(--button-shadow-color);
+    box-shadow: 1px 2px 0px 1px var(--button-shadow-color);
+    cursor: pointer;
+    transition: 0.125s box-shadow, 0.25s transform, 0.125s filter;
+    will-change: contents;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.login__form-login:hover {
+    box-shadow: 1px 2px 0px 1px transparent;
+    transform: translate(1px, 2px);
+}
+
+.login__form-login:active, .login__form-login:focus-visible {
+    filter: brightness(0.925);
+}
