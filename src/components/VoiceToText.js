@@ -37,12 +37,13 @@ const VoiceToText = () => {
   }, [isListening]);
 
   return (
-    <div className="voice-to-text-container">
-      <button className="voice-to-text-button" onClick={() => setIsListening(prevState => !prevState)}>
-        {isListening ? 'Stop Listening' : 'Start Listening'}
+    <div className="flashcard">
+      <button className="prac-button" onClick={() => setIsListening(prevState => !prevState)}>
+        {isListening ? 'Stop and Compare' : 'Start Speaking'}
       </button>
-      <div className="voice-to-text-transcript">{transcript}</div>
+      <div>{transcript}</div>
     </div>
+    
   );
 };
 

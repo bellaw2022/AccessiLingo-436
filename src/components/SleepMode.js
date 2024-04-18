@@ -40,14 +40,14 @@ const SleepMode = () => {
       {showPopup && (
         <div className="popup">
           <p>Need to access your health app to detect sleep.</p>
-          <button onClick={handleConfirm}>Yes</button>
-          <button onClick={handleCancel}>Cancel</button>
+          <button onClick={handleConfirm} className="read-button">Yes</button>
+          <button onClick={handleCancel} className="read-button">Cancel</button>
         </div>
       )}
       {showCanvas && (
         <div className="popup">
           <p>Sleep detect, class audio will stop in 5 mins. To stop sleep mode, click "Stop".</p>
-          <button onClick={handleStopSleepMode}>Stop</button>
+          <button onClick={handleStopSleepMode} className="read-button">Stop</button>
         </div>
       )}
     </div>

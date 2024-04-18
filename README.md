@@ -1,7 +1,7 @@
 # Project Setup Instructions
 
 Welcome to our React project! 
-![Project Image](public/proj-preview.png)
+![Project Image](public/readmeHome.png)
 ![Project Image](public/proj-preview2.png)
 
 ## Prerequisites

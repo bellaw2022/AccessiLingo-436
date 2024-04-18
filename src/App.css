@@ -13,6 +13,7 @@
   --header-button-font-color: black;
   --login-link-color: #860E44;
   --button-shadow-color: #8c4c65;
+  --story-bg-color: #f4f4f4;;
 }
 
 [data-theme='dark'] {
@@ -30,6 +31,7 @@
   --header-button-font-color: white;
   --login-link-color: #6DB432;
   --button-shadow-color: #406425;
+  --story-bg-color: black;
 }
 
 body {
@@ -172,7 +174,8 @@ body {
 .story {
   flex: 1;
   margin-top: 5%;
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
+  background-color: var(--story-bg-color);
   padding: 20px;
   border-radius: 8px;
   margin-right: 10px;
@@ -249,28 +252,6 @@ body {
 
 .classheader-button:hover {
   background-color: var(--header-hover-bg-color); 
-}
-
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  padding: 20px;
-  background-color: white;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  z-index: 300;  
-}
-
-.popup button {
-  margin-right: 10px;
-}
-
-.voice-to-text-container {
-  margin-top: 80%; /* Space from top */
-  padding-left: 50%; /* Indent from the left side */
 }
 
 .heart-model {
