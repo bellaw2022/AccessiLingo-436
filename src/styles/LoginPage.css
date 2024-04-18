@@ -54,12 +54,22 @@
     border: 1px solid var(--text-color);
 }
 
-.login__form > div i {
+.login__form > div button {
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translate(-100%, -50%);
+    transform: translate(-25%, -50%);
     color: #222;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.125s background-color;
+    border-radius: 1rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.login__form > div button:hover {
+    background-color: #ddd;
 }
 
 .login__form-extras {

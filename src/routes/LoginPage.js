@@ -37,7 +37,7 @@ const LoginPage = () => {
                 onChange={handleInputChange}
                 autoFocus
             />
-            <i className="fa-solid fa-microphone"></i>
+            <button><i className="fa-solid fa-microphone"></i></button>
           </div>
           <div>
             <label htmlFor="password" className="login__form-label">Password: </label>
@@ -52,7 +52,7 @@ const LoginPage = () => {
                 value={formData.password}
                 onChange={handleInputChange}
             />
-            <i className="fa-solid fa-microphone"></i>
+            <button><i className="fa-solid fa-microphone"></i></button>
           </div>
           <div className="login__form-extras">
             <div>
