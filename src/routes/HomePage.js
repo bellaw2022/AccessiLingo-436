@@ -5,7 +5,7 @@ import "./../styles/HomePage.css";
 const HomePage = () => {
   return (
     <>
-      <div className='home-bg'>asd</div>
+      <div className='home-bg'></div>
       <div className='home-page'>
         <p className='home-page__title'>We make learning <br></br> languages easy</p>
         <p className='home-page__description'>Start your journey to fluency with our intuitive, <br></br> effective, and accessible language learning <br></br> platform with a vast community and speech <br></br> assistants integrated with AI.</p>
