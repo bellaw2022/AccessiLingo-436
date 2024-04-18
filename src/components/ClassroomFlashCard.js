@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import SideBar from './SideBar';
 import VoiceToText from './VoiceToText'; 
 import '../styles/ClassroomPrac.css'
 
@@ -13,7 +12,6 @@ const ClassroomFlashCard = () => {
 
     return (
         <div>
-            <SideBar />
             <div className="classroom-layout">
                 <div className="prac-story">
                     <h2>English Story</h2>
