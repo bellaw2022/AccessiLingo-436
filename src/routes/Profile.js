@@ -18,23 +18,23 @@ const Profile = () => {
                 <form onSubmit={handleSubmit}>
                     <div>
                         <div className='profile__details'>
-                            <label for="username">Username</label>
+                            <label htmlFor="username">Username</label>
                             <input type="text"
                                 name="username" 
                                 id="username"
                                 placeholder='Username'
                                 required 
-                                autocomplete="off"
+                                autoComplete="off"
                                 defaultValue="Shnitzel"
                             />
 
-                            <label for="email">Email</label>
+                            <label htmlFor="email">Email</label>
                             <input type="text"
                                 name="email" 
                                 id="email"
                                 placeholder='Email'
                                 required 
-                                autocomplete="off"
+                                autoComplete="off"
                                 defaultValue="Shnitzel.chowder@gmail.com"
                             />
                         </div>
@@ -44,13 +44,13 @@ const Profile = () => {
                             <button>
                                 <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 100 100">
                                     <path d="M 40 85 L 50 98 L 60 85 V 10 H 40 V 80 Z M 40 25 H 60" fill="transparent" strokeWidth="6" strokeLinejoin="round" strokeLinecap="round" 
-                                        transform="rotate(40) scale(1.25, 1.25)" transform-origin="50 50"/>
+                                        transform="rotate(40) scale(1.25, 1.25)" transformorigin="50 50"/>
                                 </svg>
                                <span> Edit</span>
                             </button>
                         </div>
                     </div>
-                    <label for="bio">Bio</label>
+                    <label htmlFor="bio">Bio</label>
                     <textarea 
                         name="bio" 
                         id="bio" 
@@ -58,7 +58,7 @@ const Profile = () => {
                         rows="10"
                         placeholder="Type your bio here" 
                         required 
-                        autocomplete="off"
+                        autoComplete="off"
                         defaultValue="Radda radda...">	
                     </textarea>
                     <button className='save-button'>Save</button>

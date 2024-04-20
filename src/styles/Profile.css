@@ -204,10 +204,42 @@
 /*                                   APPEARANCE                                   */
 /**********************************************************************************/
 
-.appearance > div {
-
+.appearance > div > p {
+    font-size: 1.25rem;
 }
 
+.appearance .themes-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.appearance .themes-container > div {
+    flex: 1 1;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0.25rem;
+    border: 2px solid var(--text-color);
+    background-color: var(--theme-option-bg-color);
+    height: 180px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.appearance .themes-container .custom-theme {
+    box-shadow: 0 0 1px 3px var(--button-hover-bg-color);
+}
+
+.appearance .appearance__font-size {
+    margin-top: 1rem;
+}
+
+.appearance .appearance__font-size svg {
+    height: 100px;
+}
 
 /**********************************************************************************/
 /*                                 ACCESSIBILITY                                  */

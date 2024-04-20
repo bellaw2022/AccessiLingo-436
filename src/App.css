@@ -15,6 +15,7 @@
   --button-shadow-color: #8c4c65;
   --story-bg-color: #f4f4f4;
   --profile-input-bg-color: #f4f4f4;
+  --theme-option-bg-color: #D6E7F0;
 }
 
 [data-theme='dark'] {
@@ -34,6 +35,7 @@
   --button-shadow-color: #406425;
   --story-bg-color: black;
   --profile-input-bg-color: #2e2e2e;
+  --theme-option-bg-color: #4b4d4e;
 }
 
 body {
