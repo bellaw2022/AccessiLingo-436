@@ -56,8 +56,8 @@ const LoginPage = () => {
           </div>
           <div className="login__form-extras">
             <div>
-              <label htmlFor="password">Remember Me</label>
-              <input type="checkbox"></input>
+              <label htmlFor="remember">Remember Me</label>
+              <input id="remember" name="remember" type="checkbox"></input>
             </div>
             <a href="#">Forgot Password?</a>
           </div>

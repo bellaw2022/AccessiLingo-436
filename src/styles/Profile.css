@@ -1,0 +1,293 @@
+/**********************************************************************************/
+/*                                     HEADER                                     */
+/**********************************************************************************/
+
+.profile__header {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
+    margin: 5vh 6vw 0 4vw;
+}
+
+.profile__header h1 {
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.profile__header > div {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+}
+
+.profile__header > div button {
+    text-align: start;
+    width: 90%;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.25rem;
+    transition: 0.25s background-color;
+    cursor: pointer;
+    position: relative;
+    color: var(--text-color);
+}
+
+.profile__header > div button:is(:hover, :focus-visible) {
+    background-color: var(--sidebar-bg-color);
+}
+
+.profile__header > div button.active {
+    background-color: var(--sidebar-bg-color);
+    font-weight: 500;
+}
+
+.profile__header > div button.active::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-150%, -50%);
+    width: 12px;
+    height: 75%;
+    border-radius: 6px;
+    background-color: var(--button-shadow-color);
+}
+
+
+/**********************************************************************************/
+/*                                      GLOBAL                                    */
+/**********************************************************************************/
+
+.profile-container {
+    display: flex;
+    width: 100%;
+}
+
+.profile-container section {
+    margin-top: 12vh;
+    width: 100%;
+}
+
+.profile-container section h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.profile-container section hr {
+    margin: 1rem 0;
+    border: 1px solid var(--text-color);
+}
+
+.profile-container .save-button {
+    background-color: var(--button-hover-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--button-shadow-color);
+    box-shadow: 1px 2px 0px 1px var(--button-shadow-color);
+    cursor: pointer;
+    transition: 0.125s box-shadow, 0.25s transform, 0.125s filter;
+    will-change: contents;
+    width: fit-content;
+    margin-top: 1rem;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.profile-container .save-button:is(:hover, :focus-visible) {
+    box-shadow: 1px 2px 0px 1px transparent;
+    transform: translate(1px, 2px);
+}
+
+.profile-container .save-button:active {
+    filter: brightness(0.925);
+}
+
+.profile-container :is(.section-title, h3) {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+/**********************************************************************************/
+/*                                    PROFILE                                     */
+/**********************************************************************************/
+
+.profile form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.profile form > div {
+    display: flex;
+    gap: 3rem;
+}
+
+.profile form .profile__details {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 6;
+}
+
+.profile form .profile__picture {
+    background-color: img;
+    flex-grow: 4;
+}
+
+.profile form label:not(:first-child) {
+    margin-top: 1rem;
+}
+
+.profile form .profile__picture {
+    position: relative;
+}
+
+.profile form .profile__picture img {
+    width: 160px;
+    height: auto;
+    border-radius: 50%;
+    border: 1px solid var(--text-color);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0%, -50%);
+}
+
+.profile form label {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.profile form .profile__picture button {
+    border-radius: 6px;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--text-color);
+    background-color: var(--profile-input-bg-color);
+    color: var(--text-color);
+    font-size: 1.125rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.125rem;
+    transition: 0.25s background-color;
+}
+
+.profile form .profile__picture button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+.profile form .profile__picture button svg {
+    width: 16px;
+    height: auto;
+    stroke: var(--text-color);
+    display: inline;
+}
+
+.profile form :is(input, textarea) {
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--text-color);
+    background-color: var(--profile-input-bg-color);
+    color: var(--text-color);
+    font-size: 1.125rem;
+}
+
+.profile form textarea {
+    resize: none;
+}
+
+
+/**********************************************************************************/
+/*                                   APPEARANCE                                   */
+/**********************************************************************************/
+
+.appearance > div > p {
+    font-size: 1.25rem;
+}
+
+.appearance .themes-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.appearance .themes-container > div {
+    flex: 1 1;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0.25rem;
+    border: 2px solid var(--text-color);
+    background-color: var(--theme-option-bg-color);
+    height: 180px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.25s transform, box-shadow;
+}
+
+.appearance .themes-container > div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 2px 2px 2px var(--sidebar-bg-color);
+}
+
+.appearance .themes-container .custom-theme {
+    box-shadow: 0 0 1px 3px var(--button-hover-bg-color) !important;
+}
+
+.appearance .appearance__font-size {
+    margin-top: 1rem;
+}
+
+.appearance .appearance__font-size svg {
+    height: 100px;
+}
+
+/**********************************************************************************/
+/*                                 ACCESSIBILITY                                  */
+/**********************************************************************************/
+
+.accessibility form label {
+    font-size: 1.25rem;
+}
+
+.accessibility form > div:not(:first-child) {
+    margin-top: 1rem;
+}
+
+.accessibility form .accessibility__learning > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.accessibility form > div > div > div {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+}
+
+.accessibility form > div > div > div label {
+    order: 2;
+}
+
+.accessibility form > div > div > div input {
+    width: 1.125rem;
+    height: 1.125rem;
+    border: 1px solid var(--text-color);
+    accent-color: var(--login-link-color);
+    cursor: pointer;
+}
+
+.accessibility form .accessibility__speech p {
+    margin-left: 1.4rem;
+}

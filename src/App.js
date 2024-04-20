@@ -6,6 +6,8 @@ import HomePage from "./routes/HomePage";
 import LoginPage from './routes/LoginPage'; 
 import Classroom from './routes/Classroom'; 
 import Profile from './routes/Profile';
+import ProfileAppearance from './routes/ProfileAppearance';
+import ProfileAccessibility from './routes/ProfileAccessibility';
 import Community from './routes/Community';
 import Explore from './routes/Explore';
 import ClassroomPrac from './routes/ClassroomPrac';
@@ -28,6 +30,8 @@ function App() {
             <Route path="/classroompractice" element={<ClassroomPrac />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/profileappearance" element={<ProfileAppearance />} />
+            <Route path="/profileaccessibility" element={<ProfileAccessibility />} />
             <Route path="/community" element={<Community />} />
           </Routes>
         </div>

@@ -13,13 +13,15 @@
   --header-button-font-color: black;
   --login-link-color: #860E44;
   --button-shadow-color: #8c4c65;
-  --story-bg-color: #f4f4f4;;
+  --story-bg-color: #f4f4f4;
+  --profile-input-bg-color: #f4f4f4;
+  --theme-option-bg-color: #D6E7F0;
 }
 
 [data-theme='dark'] {
   --background-color: #222121;
   --text-color: #ffffff;
-  --sidebar-bg-color: #2d2d2d;
+  --sidebar-bg-color: #2e2e2e;
   --link-color: rgb(255, 255, 255);
   --link-hover-color: #151514;
   --profile-border-color: white;
@@ -32,6 +34,8 @@
   --login-link-color: #6DB432;
   --button-shadow-color: #406425;
   --story-bg-color: black;
+  --profile-input-bg-color: #2e2e2e;
+  --theme-option-bg-color: #4b4d4e;
 }
 
 body {
