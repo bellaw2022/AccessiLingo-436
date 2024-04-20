@@ -1,6 +1,9 @@
 # Project Setup Instructions
 
-Welcome to our React project! 
+Welcome to our React project!
+
+<https://accessilingo.onrender.com/>
+
 ![Project Image](public/readmeHome.png)
 ![Project Image](public/proj-preview2.png)
 
@@ -10,9 +13,9 @@ Need to have Node.js and npm installed on your computer.
 
 ## Setting Up the Project
 
-2. **Clone the Project:**
+1. **Clone the Project:**
 
-3. **Install Dependencies:**
+2. **Install Dependencies:**
    - Change into the project directory:
      ```
      cd <project-name>
@@ -23,10 +26,9 @@ Need to have Node.js and npm installed on your computer.
      npm install
      ```
 
-4. **Start the Project:**
+3. **Start the Project:**
    - Once the installation is complete, start the project by running:
      ```
      npm start
      ```
    - This will launch the development server on port 3000
-
