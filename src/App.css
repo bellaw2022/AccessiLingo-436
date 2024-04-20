@@ -13,7 +13,8 @@
   --header-button-font-color: black;
   --login-link-color: #860E44;
   --button-shadow-color: #8c4c65;
-  --story-bg-color: #f4f4f4;;
+  --story-bg-color: #f4f4f4;
+  --profile-input-bg-color: #f4f4f4;
 }
 
 [data-theme='dark'] {
@@ -32,6 +33,7 @@
   --login-link-color: #6DB432;
   --button-shadow-color: #406425;
   --story-bg-color: black;
+  --profile-input-bg-color: #2e2e2e;
 }
 
 body {
