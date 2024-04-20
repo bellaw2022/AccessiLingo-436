@@ -107,9 +107,9 @@
     filter: brightness(0.925);
 }
 
-.profile-container :is(label, .section-title, h3) {
+.profile-container :is(.section-title, h3) {
     font-weight: bold;
-    font-size: 1.25em;
+    font-size: 1.25rem;
 }
 
 /**********************************************************************************/
@@ -154,6 +154,11 @@
     top: 50%;
     right: 0;
     transform: translate(0%, -50%);
+}
+
+.profile form label {
+    font-weight: bold;
+    font-size: 1.25rem;
 }
 
 .profile form .profile__picture button {
@@ -227,10 +232,17 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+    cursor: pointer;
+    transition: 0.25s transform, box-shadow;
+}
+
+.appearance .themes-container > div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 2px 2px 2px var(--sidebar-bg-color);
 }
 
 .appearance .themes-container .custom-theme {
-    box-shadow: 0 0 1px 3px var(--button-hover-bg-color);
+    box-shadow: 0 0 1px 3px var(--button-hover-bg-color) !important;
 }
 
 .appearance .appearance__font-size {
@@ -245,6 +257,37 @@
 /*                                 ACCESSIBILITY                                  */
 /**********************************************************************************/
 
-.accessibility form {
+.accessibility form label {
+    font-size: 1.25rem;
+}
 
+.accessibility form > div:not(:first-child) {
+    margin-top: 1rem;
+}
+
+.accessibility form .accessibility__learning > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.accessibility form > div > div > div {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+}
+
+.accessibility form > div > div > div label {
+    order: 2;
+}
+
+.accessibility form > div > div > div input {
+    width: 1.125rem;
+    height: 1.125rem;
+    border: 1px solid var(--text-color);
+    accent-color: var(--login-link-color);
+    cursor: pointer;
+}
+
+.accessibility form .accessibility__speech p {
+    margin-left: 1.4rem;
 }

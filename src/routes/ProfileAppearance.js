@@ -64,26 +64,24 @@ const ProfileAppearance = () => {
                         <defs>
                         <filter id="drop-shadow" primitiveUnits="objectBoundingBox">
                             <feDropShadow in="SourceGraphic" stdDeviation="0.05" dx="0" dy="0.025" flood-color="#555"/>
-                            <feMerge>
-                                <feMergeNode />
-                                <feMergeNode in="SourceGraphic" />
-                            </feMerge>
                         </filter>
                         </defs>
-                        <text x="0" y="55">A</text>
-                        <text x="340" y="60" fontSize="2rem">A</text>
+                        <g fill="var(--text-color)">
+                            <text x="0" y="55">A</text>
+                            <text x="340" y="60" fontSize="2rem">A</text>
+                        </g>
                         <g strokeWidth="2">
                             <path d="M 25 50 H 175" stroke="white" />
-                            <path d="M 175 50 H 325" stroke="black" />
+                            <path d="M 175 50 H 325" stroke="#555" />
                             <path id="tick-white" d="M 25 42 V 58" stroke="white"/>
                             <use href="#tick-white" x="50"/>
                             <use href="#tick-white" x="100"/>
                             <use href="#tick-white" x="150"/>
-                            <path id="tick-black" d="M 225 42 V 58" stroke="black"/>
+                            <path id="tick-black" d="M 225 42 V 58" stroke="#555"/>
                             <use href="#tick-black" x="50"/>
                             <use href="#tick-black" x="100"/>
                         </g>
-                        <circle cx="175" cy="50" r="10" fill="white" filter="url(#drop-shadow)"/>
+                        <circle cx="175" cy="50" r="10" fill="white" filter="url(#drop-shadow)" style={{cursor: "pointer"}}/>
                     </svg>
                 </div>
                 <button className='save-button'>Save</button>
