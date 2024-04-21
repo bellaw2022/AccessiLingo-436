@@ -52,17 +52,23 @@
   .slider.round:before {
     border-radius: 50%;
   }
+  
+  .button-container {
+    align-self: flex-end; 
+    width: 100%;
+}
   .popup {
     position: fixed;
     top: 50%;
     left: 50%;
+    justify-content: center;
     transform: translate(-50%, -50%);
-    width: 300px;
+    width: 400px;
     padding: 20px;
     background-color: rgb(164, 179, 222);
     border: 3px solid #ccc;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    border-radius: 15%;
+    border-radius: 5%;
     z-index: 300;  
   }
   
