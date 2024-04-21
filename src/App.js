@@ -8,10 +8,11 @@ import Classroom from './routes/Classroom';
 import Profile from './routes/Profile';
 import ProfileAppearance from './routes/ProfileAppearance';
 import ProfileAccessibility from './routes/ProfileAccessibility';
-import Community from './routes/Community';
+import MainCommunityPage from './routes/Community';
 import Explore from './routes/Explore';
 import ClassroomPrac from './routes/ClassroomPrac';
 import { useTheme } from './ThemeContext'; 
+import AIChat from './routes/AIChat';
 
 function App() {
   const { theme } = useTheme();  
@@ -32,7 +33,8 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/profileappearance" element={<ProfileAppearance />} />
             <Route path="/profileaccessibility" element={<ProfileAccessibility />} />
-            <Route path="/community" element={<Community />} />
+            <Route path="/community" element={<MainCommunityPage />} />
+            <Route path="/community/aichat" element={<AIChat />} />
           </Routes>
         </div>
       </div>
