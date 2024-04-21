@@ -31,7 +31,7 @@ const AIChat = () => {
 
   return (
     <div className="aichat-container">
-        <h1>Chat</h1>
+        <h1>AI Chat Box</h1>
         <div className="aichat-content">
             {chatMessages.map((message, index) => (
                 <div key={index} className={index % 2 === 0 ? "ai-chat-box-ai" : "ai-chat-box-me"}>

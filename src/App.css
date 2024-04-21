@@ -13,7 +13,7 @@
   --header-button-font-color: black;
   --login-link-color: #860E44;
   --button-shadow-color: #8c4c65;
-  --story-bg-color: #f4f4f4;
+  --story-bg-color: #f8f0e3;
   --profile-input-bg-color: #f4f4f4;
   --theme-option-bg-color: #D6E7F0;
 }
@@ -638,7 +638,7 @@ body {
 
 .send-button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: var(--button-bg-color);
   color: white;
   border: none;
   border-radius: 5px;
@@ -647,12 +647,19 @@ body {
 }
 
 .send-button:hover {
-  background-color: #0056b3;
+  background-color:var(--button-hover-bg-color);
 }
 
 .aichat-container {
+  position: relative; 
+  top: 120px; 
   display: flex;
   flex-direction: column;
+  background-color: #f8f0e3; 
+  padding: 20px;
+  border: 1px solid #ccc; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 15px;
 }
 
 .ai-chat-box-ai {
@@ -666,8 +673,8 @@ body {
 .ai-chat-box-me {
   align-self: flex-end;
   width: 70%; /* Adjust as needed */
-  background-color: #0084ff; /* Just for visualization */
-  color: white; /* Just for visualization */
+  background-color: #f8acc9; /* Just for visualization */
+  color: white; 
   padding: 10px;
   margin: 5px;
 }

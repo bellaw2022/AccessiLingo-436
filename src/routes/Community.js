@@ -11,7 +11,7 @@ const Community = () => {
   return (
     <div className="main-community-page">
       <div className="div">
-        <div className="text-wrapper">Community</div>
+        {/* <div className="text-wrapper">Community</div> */}
         <div className="overlap">
           <div className="text-wrapper-2">Learn More</div>
           <div className="rectangle" />
