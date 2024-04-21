@@ -3,7 +3,7 @@ import ClassroomFlashCard from '../components/ClassroomFlashCard';
 import ClassroomHeader from '../components/ClassroomHeader';
 import { useState } from 'react';
 import VoiceToText from '../components/VoiceToText';
-import '../App.css'; 
+ import '../styles/ClassroomPrac.css'
 
 
 const ClassroomPrac = () => {

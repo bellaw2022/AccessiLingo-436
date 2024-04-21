@@ -192,6 +192,8 @@ body {
   border-radius: 4px;
   cursor: pointer;
   color: var(--button-font-color);
+  margin-top: 5px;
+  margin: 10px;
 }
 
 .read-button:hover {
@@ -252,6 +254,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-right: 10px;
 }
 
 .classheader-button:hover {
