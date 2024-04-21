@@ -39,14 +39,19 @@ const SleepMode = () => {
       </label>
       {showPopup && (
         <div className="popup">
-          <p>Need to access your health app to detect sleep.</p>
-          <button onClick={handleConfirm} className="read-button">Yes</button>
-          <button onClick={handleCancel} className="read-button">Cancel</button>
+          <p>To activate Sleeping Mode, we require access to your health app to monitor your sleep patterns.</p>
+          <img src="/healthapp.jpeg" alt="Health App Access Required" style={{ margin: '20px 0' }} />
+          <div className="button-container">
+            <button onClick={handleConfirm} className="read-button">Yes</button>
+            <button onClick={handleCancel} className="read-button">Cancel</button>
+        </div>
         </div>
       )}
       {showCanvas && (
         <div className="popup">
-          <p>Sleep detect, class audio will stop in 5 mins. To stop sleep mode, click "Stop".</p>
+          <p>Sleep detected: the class audio will automatically cease in 5 minutes.</p>
+          <p>If you wish to terminate Sleeping Mode earlier, please click "Stop".</p>
+          <img src="/class.jpg" alt="sleepmode" style={{ margin: '10px 0' }} />
           <button onClick={handleStopSleepMode} className="read-button">Stop</button>
         </div>
       )}
