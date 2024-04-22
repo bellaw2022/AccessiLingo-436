@@ -32,13 +32,11 @@ const Explore = ({ setMode, className }) => {
         speech.rate = 0.9;
         speech.pitch = 1.2;
 
-        if (elementId === 'spanish2' || 'spanish1') {
-            speech.lang = 'es-ES'; // Spanish
-        }
-        else if (elementId === 'french1' || 'french2') {
+        if (elementId === 'spanish1' || elementId === 'spanish2') {
+          speech.lang = 'es-ES'; // Spanish
+        } else if (elementId === 'french1' || elementId === 'french2') {
             speech.lang = 'fr-FR'; // French
-        }
-        else if (elementId === 'italian1' || 'italian2') {
+        } else if (elementId === 'italian1' || elementId === 'italian2') {
             speech.lang = 'it-IT'; // Italian
         }
 
