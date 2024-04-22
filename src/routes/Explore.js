@@ -1,23 +1,55 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import HeartModel from '../components/HeartModel';
 import '../styles/Explore.css'; 
-import SleepMode from '../components/SleepMode';
 
 
 
 const Explore = ({ setMode, className }) => {
-  const [isModalOpen, setModalOpen] = useState(false);
+  const [openModal, setOpenModal] = useState(null);
   const navigate = useNavigate()
 
-  const goToAIChat=()=>{
-    navigate("/community/aichat");
-  }
-
-  const toggleModal = () => {
-    setModalOpen(!isModalOpen);
+  const openModalHandler = (modalId) => {
+    setOpenModal(modalId);
   };
 
+  const closeModalHandler = () => {
+    setOpenModal(null);
+  };
+
+  const [reading, setReading] = useState(false);
+    const [currentReader, setCurrentReader] = useState(null);
+
+    const readText = (elementId) => {
+        if (reading && currentReader) {
+            window.speechSynthesis.cancel(); 
+            setReading(false);
+            return;
+        }
+
+        const storyText = document.getElementById(elementId).textContent;
+        const speech = new SpeechSynthesisUtterance(storyText);
+        speech.volume = 1;
+        speech.rate = 0.9;
+        speech.pitch = 1.2;
+
+        if (elementId === 'spanish2' || 'spanish1') {
+            speech.lang = 'es-ES'; // Spanish
+        }
+        else if (elementId === 'french1' || 'french2') {
+            speech.lang = 'fr-FR'; // French
+        }
+        else if (elementId === 'italian1' || 'italian2') {
+            speech.lang = 'it-IT'; // Italian
+        }
+
+        speech.onend = () => {
+            setReading(false);
+        };
+
+        window.speechSynthesis.speak(speech);
+        setCurrentReader(elementId);
+        setReading(true);
+    };
 
   return (
     <div className="Explore-Page">
@@ -26,9 +58,35 @@ const Explore = ({ setMode, className }) => {
           <div className="text-wrapper-2">Learn More</div>
           <div className="rectangle" />
           <div className="text-wrapper-3">
-            <button onClick={toggleModal} className="comm-chat-btn">Learn More</button>
+            <button onClick={() => openModalHandler('spanish')} className="comm-chat-btn">Learn More</button>
           </div>
         </div>
+        {openModal === 'spanish' && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={closeModalHandler}>&times;</span>
+            <p>
+              <div className="modal-header">
+                Preview Spanish Lessons
+              </div>
+              <div className="Picture1">
+                <img className="Animal" alt="Chicken" src="Chicken.png" />
+                <div className="Pic1Text"><p id="spanish1">Pollo</p></div>
+              </div>
+              <div className="Picture2">
+                <img className="Animal" alt="Dog" src="Dog.png" />
+                <div className="Pic2Text"><p id="spanish2">Perro</p></div>
+              </div>
+              <button className="AudioText" onClick={() => readText('spanish1')}>
+                            {reading && currentReader === 'spanish1' ? 'Stop' : 'Read'}
+              </button>
+              <button className="AudioText2" onClick={() => readText('spanish2')}>
+                            {reading && currentReader === 'spanish2' ? 'Stop' : 'Read'}
+              </button>
+            </p>
+          </div>
+        </div>
+        )}
         <div className="dialogue-box">
           <div className="overlap-group">
             <div className="text-wrapper-4">Spanish</div>
@@ -40,28 +98,31 @@ const Explore = ({ setMode, className }) => {
         </div>
         <div className="div-wrapper">
           <div className="text-wrapper-5">
-            <button onClick={toggleModal} className="comm-chat-btn">Learn More</button>
+            <button onClick={() => openModalHandler('french')} className="comm-chat-btn">Learn More</button>
           </div>
         </div>
-        {isModalOpen && (
+        {openModal === 'french' && (
         <div className="modal">
           <div className="modal-content">
-            <span className="close" onClick={toggleModal}>&times;</span>
+            <span className="close" onClick={closeModalHandler}>&times;</span>
             <p>
               <div className="modal-header">
-                Preview Spanish Lessons
+                Preview French Lessons
               </div>
               <div className="Picture1">
-                <img className="Animal" alt="Chicken" src="Chicken.png" />
-                <div className="Pic1Text">Pollo</div>
+              <img className="Animal" alt="Chicken" src="Chicken.png" />
+                <div className="Pic1Text"><p id="french1">Poulet</p></div>
               </div>
               <div className="Picture2">
                 <img className="Animal" alt="Dog" src="Dog.png" />
-                <div className="Pic2Text">Perro</div>
+                <div className="Pic2Text"><p id="french2">Chien</p></div>
               </div>
-              <div className="AudioText">
-                Click me For Audio
-              </div>
+              <button className="AudioText" onClick={() => readText('french1')}>
+                            {reading && currentReader === 'french1' ? 'Stop' : 'Read'}
+              </button>
+              <button className="AudioText2" onClick={() => readText('french2')}>
+                            {reading && currentReader === 'french2' ? 'Stop' : 'Read'}
+              </button>
             </p>
           </div>
         </div>
@@ -88,9 +149,35 @@ const Explore = ({ setMode, className }) => {
         </div>
         <div className="overlap-3">
           <div className="text-wrapper-5">
-            <button onClick={toggleModal} className="comm-chat-btn">Learn More</button>
+            <button onClick={() => openModalHandler('italian')} className="comm-chat-btn">Learn More</button>
           </div>
         </div>
+        {openModal === 'italian' && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={closeModalHandler}>&times;</span>
+            <p>
+              <div className="modal-header">
+                Preview Italian Lessons
+              </div>
+              <div className="Picture1">
+                <img className="Animal" alt="Chicken" src="Chicken.png" />
+                <div className="Pic1Text"><p id="italian1">Pollo</p></div>
+              </div>
+              <div className="Picture2">
+                <img className="Animal" alt="Dog" src="Dog.png" />
+                <div className="Pic2Text"><p id="italian2">Cane</p></div>
+              </div>
+              <button className="AudioText" onClick={() => readText('italian1')}>
+                            {reading && currentReader === 'italian1' ? 'Stop' : 'Read'}
+              </button>
+              <button className="AudioText2" onClick={() => readText('italian2')}>
+                            {reading && currentReader === 'italian2' ? 'Stop' : 'Read'}
+              </button>
+            </p>
+          </div>
+        </div>
+        )}
         <div className="search-button">
             <div className="text-wrapper-7">Search</div>
         </div>
