@@ -9,7 +9,7 @@ import Profile from './routes/Profile';
 import ProfileAppearance from './routes/ProfileAppearance';
 import ProfileAccessibility from './routes/ProfileAccessibility';
 import MainCommunityPage from './routes/Community';
-import Explore from './routes/Explore';
+import ExplorePage from './routes/Explore';
 import ClassroomPrac from './routes/ClassroomPrac';
 import { useTheme } from './ThemeContext'; 
 import AIChat from './routes/AIChat';
@@ -26,7 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Navigate to="/home" />} />
             <Route path="/home" element={<HomePage />} />
-            <Route path="/explore" element={<Explore />} />
+            <Route path="/explore" element={<ExplorePage />} />
             <Route path="/classroom" element={<Classroom />} />
             <Route path="/classroompractice" element={<ClassroomPrac />} />
             <Route path="/login" element={<LoginPage />} />

@@ -1,36 +1,71 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 import HeartModel from '../components/HeartModel';
-import '../App.css'; 
+import '../styles/Explore.css'; 
+
 
 const Explore = () => {
+  const navigate = useNavigate()
+
+  const goToAIChat=()=>{
+    navigate("/community/aichat");
+  }
+
   return (
-    <div className="explore-container">
-        <div className="main-content">
-            <div className="class-container left-classes">
-                <img src="./class.jpg" alt="Class 1" className="class-preview"/>
-                <p>class 1</p>
-                <img src="./class.jpg" alt="Class 2" className="class-preview"/>
-                <p>class 2</p>
-                <img src="./class.jpg" alt="Class 3" className="class-preview"/>
-                <p>class 3</p>
+    <div className="Explore-Page">
+      <div className="div">
+        <div className="overlap">
+          <div className="text-wrapper-2">Learn More</div>
+          <div className="rectangle" />
+          <div className="text-wrapper-3">
+            <button onClick={() => goToAIChat()} className="comm-chat-btn">Learn More</button>
+          </div>
+        </div>
+        <div className="dialogue-box">
+          <div className="overlap-group">
+            <div className="text-wrapper-4">Spanish</div>
+            <p className="p">1.2M Learners</p>
+          </div>
+          <div className="div-2">
+            <img className="Language" alt="Spanish" src="Spanish.png" />
+          </div>
+        </div>
+        <div className="div-wrapper">
+          <div className="text-wrapper-5">Learn More</div>
+        </div>
+        <div className="overlap-2">
+          <div className="dialogue-box-3">
+            <div className="overlap-group">
+              <div className="text-wrapper-4">French</div>
+              <p className="p">859,000 Learners</p>
             </div>
-            <div className="heart-container">
+            <div className="div-2">
+              <img className="Language" alt="French" src="French.png" />
+            </div>
+          </div>
+        </div>
+        <div className="dialogue-box-2">
+          <div className="overlap-group">
+            <div className="text-wrapper-4">Italian</div>
+            <p className="p">567,000 Learners</p>
+          </div>
+          <div className="div-2">
+            <img className="Language" alt="Italian" src="Italian.png" />
+          </div>
+        </div>
+        <div className="overlap-3">
+          <div className="text-wrapper-6">Learn More</div>
+        </div>
+        <div className="heart-container">
                 <HeartModel />
-            </div>
-            <div className="class-container right-classes">
-                <img src="./class.jpg" alt="Class 4" className="class-preview"/>
-                <p>class 4</p>
-                <img src="./class.jpg" alt="Class 5" className="class-preview"/>
-                <p>class 5</p>
-                <img src="./class.jpg" alt="Class 6" className="class-preview"/>
-                <p>class 6</p>
-            </div>
         </div>
-        <div className="explore-footer">
-            <p>1. diff className</p>
-            <p>2. can have voice assist to read out the class and intro</p>
-            <p>3. can have AI assistance to give suggestion for choosing class</p>
+        <div className="search-button">
+            <div className="text-wrapper-7">Search</div>
         </div>
+        <div className="language-courses-tab">
+            <div className="text-wrapper-8">Language Courses For English Speakers</div>
+        </div>
+      </div>
     </div>
   );
 };
