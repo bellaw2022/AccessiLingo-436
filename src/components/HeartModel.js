@@ -11,7 +11,7 @@ const HeartModel = () => {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, 400 / 400, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ alpha: true });
-    renderer.setSize(500, 500);
+    renderer.setSize(150, 150);
 
     mountRef.current.appendChild(renderer.domElement);
 

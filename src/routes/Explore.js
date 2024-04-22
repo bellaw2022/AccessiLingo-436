@@ -56,9 +56,6 @@ const Explore = () => {
         <div className="overlap-3">
           <div className="text-wrapper-6">Learn More</div>
         </div>
-        <div className="heart-container">
-                <HeartModel />
-        </div>
         <div className="search-button">
             <div className="text-wrapper-7">Search</div>
         </div>

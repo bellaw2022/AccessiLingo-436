@@ -291,10 +291,15 @@ body {
   align-items: center; 
 }
 
-.class-container,
-.heart-container {
+.class-container {
   padding: 0;
   margin: 0;
+}
+
+.heart-container {
+  padding: 0;
+  margin-top: 45px;
+  margin-left: 110px;
 }
 
 .class-preview {
