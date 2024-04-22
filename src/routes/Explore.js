@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import HeartModel from '../components/HeartModel';
 import '../styles/Explore.css'; 
+import SleepMode from '../components/SleepMode';
 
 
-const Explore = () => {
+
+const Explore = ({ setMode, className }) => {
+  const [isModalOpen, setModalOpen] = useState(false);
   const navigate = useNavigate()
 
   const goToAIChat=()=>{
     navigate("/community/aichat");
   }
+
+  const toggleModal = () => {
+    setModalOpen(!isModalOpen);
+  };
+
 
   return (
     <div className="Explore-Page">
@@ -18,7 +26,7 @@ const Explore = () => {
           <div className="text-wrapper-2">Learn More</div>
           <div className="rectangle" />
           <div className="text-wrapper-3">
-            <button onClick={() => goToAIChat()} className="comm-chat-btn">Learn More</button>
+            <button onClick={toggleModal} className="comm-chat-btn">Learn More</button>
           </div>
         </div>
         <div className="dialogue-box">
@@ -31,8 +39,33 @@ const Explore = () => {
           </div>
         </div>
         <div className="div-wrapper">
-          <div className="text-wrapper-5">Learn More</div>
+          <div className="text-wrapper-5">
+            <button onClick={toggleModal} className="comm-chat-btn">Learn More</button>
+          </div>
         </div>
+        {isModalOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={toggleModal}>&times;</span>
+            <p>
+              <div className="modal-header">
+                Preview Spanish Lessons
+              </div>
+              <div className="Picture1">
+                <img className="Animal" alt="Chicken" src="Chicken.png" />
+                <div className="Pic1Text">Pollo</div>
+              </div>
+              <div className="Picture2">
+                <img className="Animal" alt="Dog" src="Dog.png" />
+                <div className="Pic2Text">Perro</div>
+              </div>
+              <div className="AudioText">
+                Click me For Audio
+              </div>
+            </p>
+          </div>
+        </div>
+        )}
         <div className="overlap-2">
           <div className="dialogue-box-3">
             <div className="overlap-group">
@@ -54,7 +87,9 @@ const Explore = () => {
           </div>
         </div>
         <div className="overlap-3">
-          <div className="text-wrapper-6">Learn More</div>
+          <div className="text-wrapper-5">
+            <button onClick={toggleModal} className="comm-chat-btn">Learn More</button>
+          </div>
         </div>
         <div className="search-button">
             <div className="text-wrapper-7">Search</div>
